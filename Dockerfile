@@ -17,7 +17,12 @@ ENV GOPATH="$HOME/go"
 RUN go env
 RUN go version
 
-RUN go get -u -t github.com/couchbase/sync_gateway/...
+RUN apt-get -y install repo
+RUN mkdir ~/sync_gateway 
+RUN cd ~/sync_gateway; wget https://raw.githubusercontent.com/couchbase/sync_gateway/master/bootstrap.sh
+RUN cd ~/sync_gateway; chmod +x bootstrap.sh
+RUN cd ~/sync_gateway; ./bootstrap.sh
+#RUN go get -u -t github.com/couchbase/sync_gateway/...
 
 RUN git init
 RUN git clone https://github.com/couchbase/sync_gateway.git
