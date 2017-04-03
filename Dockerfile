@@ -14,7 +14,7 @@ RUN git clone https://github.com/couchbase/sync_gateway.git
 RUN git init
 RUN git submodule update --init --recursive
 
-RUN sync_gateway\build.sh
+RUN sync_gateway/build.sh
 
 RUN dir bin
 
