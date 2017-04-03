@@ -15,5 +15,4 @@ RUN git submodule update --init --recursive
 RUN cd sync_gateway \
 ./build.sh
 
-CMD cd sync_gateway \ 
-bin/sync_gateway examples/admin_party.json
+CMD sync_gateway/bin/sync_gateway sync_gateway/examples/admin_party.json
