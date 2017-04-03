@@ -8,7 +8,7 @@ RUN apt-get -y install git wget curl bc
 RUN wget http://dave.cheney.net/paste/go1.4.2.linux-arm~multiarch-armv7-1.tar.gz
 RUN  tar -C /usr/local -xzf  go1.4.2.linux-arm~multiarch-armv7-1.tar.gz
 
-ENV PATH="/opt/gtk/bin:${PATH}"
+ENV PATH="/usr/local/go/bin:${PATH}"
 
 RUN dir /usr/local/go/bin
 
