@@ -11,7 +11,7 @@ RUN apt-get -y install git wget curl bc golang
 #ENV PATH="/usr/local/go/bin:${PATH}"
 
 #RUN dir /usr/local/go/bin
-RUN go
+RUN go env
 
 RUN git init
 RUN git clone https://github.com/couchbase/sync_gateway.git
