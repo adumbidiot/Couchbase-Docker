@@ -6,6 +6,7 @@ RUN apt-get -y install apt-utils
 RUN apt-get -y install git wget curl
 
 RUN git clone https://github.com/couchbase/sync_gateway.git
+RUN git init
 RUN git submodule update --init --recursive
 
 RUN cd sync_gateway \
