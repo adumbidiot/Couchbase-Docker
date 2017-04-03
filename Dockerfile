@@ -18,6 +18,8 @@ RUN git clone https://github.com/couchbase/sync_gateway.git
 RUN dir sync_gateway
 RUN git submodule update --init --recursive
 
+RUN cd sync_gateway \ make
+
 RUN sync_gateway/build.sh
 
 RUN dir bin
