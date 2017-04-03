@@ -15,6 +15,7 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 ENV GOPATH="$HOME/go"
 
 RUN go env
+RUN go version
 
 RUN go get -u -t github.com/couchbase/sync_gateway/...
 
