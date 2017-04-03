@@ -11,7 +11,7 @@ RUN apt-get -y install git wget curl bc golang build-essential
 #ENV PATH="/usr/local/go/bin:${PATH}"
 
 #RUN dir /usr/local/go/bin
-ENV GORPATH=/usr/local/go/bin
+ENV GOPATH=/usr/local/go/bin
 
 RUN go env
 
