@@ -19,6 +19,7 @@ RUN dir sync_gateway
 RUN git submodule update --init --recursive
 
 RUN cd sync_gateway \ make
+RUN cd sync_gateway make install
 
 RUN sync_gateway/build.sh
 
