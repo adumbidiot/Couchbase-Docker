@@ -12,7 +12,5 @@ RUN git submodule update --init --recursive
 RUN cd sync_gateway \
 ./build.sh
 
-RUN cd sync_gateway \ 
+CMD cd sync_gateway \ 
 bin/sync_gateway examples/admin_party.json
-
-CMD curl -X GET http://localhost:4985/db/
