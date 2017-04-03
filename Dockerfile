@@ -15,6 +15,8 @@ ENV GOPATH="$HOME/go"
 
 RUN go env
 
+RUN go get -u -t github.com/couchbase/sync_gateway/...
+
 RUN git init
 RUN git clone https://github.com/couchbase/sync_gateway.git
 RUN dir sync_gateway
