@@ -39,4 +39,4 @@ RUN cd ~/sync_gateway; ./build.sh
 
 #RUN dir bin
 
-CMD godeps/bin/sync_gateway
+CMD go/godeps/bin/sync_gateway
