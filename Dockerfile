@@ -18,6 +18,7 @@ RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.
 RUN cd couchbase; repo sync
 
 RUN apt-get -y install automake
-RUN apt-get install libtool
+RUN apt-get -y install libtool
+RUN apt-get -y install libevent
 
 RUN cd couchbase; make
