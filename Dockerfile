@@ -14,9 +14,6 @@ RUN tar -xvf go1.7.5.linux-armv6l.tar.gz -C /usr/local/go --strip-components=1
 ENV PATH="/usr/local/go/bin:${PATH}"
 ENV GOPATH="$HOME/go"
 
-RUN go env
-RUN go version
-
 RUN apt-get -y install python python3
 
 RUN mkdir ~/sync_gateway 
