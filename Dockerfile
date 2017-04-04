@@ -27,16 +27,16 @@ RUN cd ~/sync_gateway; ./build.sh
 
 #RUN go get -u -t github.com/couchbase/sync_gateway/...
 
-RUN git init
-RUN git clone https://github.com/couchbase/sync_gateway.git
-RUN dir sync_gateway
-RUN git submodule update --init --recursive
+#RUN git init
+#RUN git clone https://github.com/couchbase/sync_gateway.git
+#RUN dir sync_gateway
+#RUN git submodule update --init --recursive
 
 #RUN cd sync_gateway && make
 #RUN cd sync_gateway && make install
 
-RUN sync_gateway/build.sh
+#RUN sync_gateway/build.sh
 
-RUN dir bin
+#RUN dir bin
 
-CMD sync_gateway/bin/sync_gateway sync_gateway/examples/admin_party.json
+CMD godeps/bin/sync_gateway
