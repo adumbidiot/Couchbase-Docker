@@ -33,5 +33,6 @@ RUN cd ~/sync_gateway; ./build.sh
 #RUN git submodule update --init --recursive
 
 #RUN sync_gateway/build.sh
-
+RUN dir ./go
+RUN dir ./sync_gateway
 CMD ./go/godeps/bin/sync_gateway
