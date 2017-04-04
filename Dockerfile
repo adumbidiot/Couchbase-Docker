@@ -9,11 +9,11 @@ RUN apt-get -y install curl git python build-essential curl
 RUN mkdir ~/bin
 ENV PATH="home/bin:${PATH}"
 
-RUN  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+RUN curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
 
 RUN echo $PATH
-RUN dir home
+RUN dir ~
 RUN mkdir couchbase
 RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
 RUN cd couchbase; repo sync
