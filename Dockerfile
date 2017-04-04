@@ -11,7 +11,7 @@ RUN mkdir ~/bin
 RUN curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
 
-ENV PATH="~/bin:${PATH}"
+ENV PATH="/root/bin:${PATH}"
 RUN echo $HOME
 RUN repo
 
