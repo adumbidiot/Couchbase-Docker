@@ -4,10 +4,8 @@ RUN apt-get -y update
 RUN apt-get -y install apt-utils
 
 RUN apt-get -y install git wget curl bc 
-#golang build-essential
 
-#RUN wget http://dave.cheney.net/paste/go1.4.2.linux-arm~multiarch-armv7-1.tar.gz
-#RUN  tar -C /usr/local -xzf  go1.4.2.linux-arm~multiarch-armv7-1.tar.gz
+#golang build-essential
 
 #RUN dir /usr/local/go/bin
 #ENV GOPATH="$HOME/go"
@@ -28,6 +26,7 @@ RUN cd ~/sync_gateway; wget https://raw.githubusercontent.com/couchbase/sync_gat
 RUN cd ~/sync_gateway; chmod +x bootstrap.sh
 RUN cd ~/sync_gateway; ./bootstrap.sh
 RUN cd ~/sync_gateway; ./build.sh
+
 #RUN go get -u -t github.com/couchbase/sync_gateway/...
 
 RUN git init
