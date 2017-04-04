@@ -29,7 +29,7 @@ RUN apt-get -y install python
 #RUN apt-get -y install erlang-nox
 #RUN apt-get -y install erlang-dev
 #RUN apt-get -y install erlang-src
-
+RUN apt-get -y install ncurses
 RUN git clone https://github.com/erlang/otp.git
 RUN cd otp; ./otp_build autoconf  
 RUN cd otp; ./configure
