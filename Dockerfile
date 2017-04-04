@@ -1,4 +1,4 @@
-FROM hypriot/rpi-golang
+FROM resin/rpi-raspbian
 
 RUN apt-get -y update
 RUN apt-get -y install apt-utils
@@ -13,6 +13,10 @@ RUN apt-get -y install git wget curl bc
 
 #RUN dir /usr/local/go/bin
 #ENV GOPATH="$HOME/go"
+ 
+RUN curl -sSLO https://storage.googleapis.com/golang/go1.7.5.linux-armv6l.tar.gz  
+RUN mkdir -p /usr/local/go  
+RUN tar -xvf go1.7.5.linux-armv6l.tar.gz -C /usr/local/go --strip-components=1  
 
 RUN go env
 RUN go version
