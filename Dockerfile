@@ -13,5 +13,7 @@ RUN  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bi
 RUN chmod a+x ~/bin/repo
 
 RUN mkdir couchbase
-RUN repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
-RUN repo sync
+RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
+RUN couchbase; repo sync
+
+RUN couchbase; make
