@@ -4,7 +4,9 @@ RUN apt-get -y update
 RUN apt-get -y install apt-utils
 
 RUN apt-get -y install curl git python build-essential curl
-#RUN apt-get -y install python automake libtool pkg-config check libssl-dev sqlite3 libevent-dev libglib2.0-dev libcurl4-openssl-dev erlang-nox curl erlang-dev erlang-src ruby libmozjs-dev libicu-dev libv8-dev libcloog-ppl0 libsnappy-dev
+#automake libtool libevent-dev libsnappy-dev
+
+#RUN apt-get -y install python pkg-config check libssl-dev sqlite3 libglib2.0-dev libcurl4-openssl-dev erlang-nox erlang-dev erlang-src ruby libmozjs-dev libicu-dev libv8-dev libcloog-ppl0
 
 RUN mkdir ~/bin
 
@@ -21,5 +23,6 @@ RUN apt-get -y install automake
 RUN apt-get -y install libtool
 RUN apt-get -y install libevent-dev
 RUN apt-get -y install libsnappy-dev
+RUN apt-get -y install libicu-dev
 
 RUN cd couchbase; make
