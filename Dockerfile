@@ -35,4 +35,4 @@ RUN cd ~/sync_gateway; ./build.sh
 #RUN sync_gateway/build.sh
 RUN dir ~/sync_gateway
 
-CMD ./go/godeps/bin/sync_gateway
+CMD ~/go/godeps/bin/sync_gateway
