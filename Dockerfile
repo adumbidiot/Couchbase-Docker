@@ -19,6 +19,6 @@ RUN cd couchbase; repo sync
 
 RUN apt-get -y install automake
 RUN apt-get -y install libtool
-RUN apt-get -y install libevent
+RUN apt-get -y install libevent-dev
 
 RUN cd couchbase; make
