@@ -12,7 +12,7 @@ ENV PATH=~/bin:$PATH
 RUN  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 RUN chmod a+x ~/bin/repo
 
-RUN dir ~/bin
+RUN PATH
 RUN mkdir couchbase
 RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
 RUN cd couchbase; repo sync
