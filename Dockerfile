@@ -25,14 +25,6 @@ RUN cd ~/sync_gateway; chmod +x bootstrap.sh
 RUN cd ~/sync_gateway; ./bootstrap.sh
 RUN cd ~/sync_gateway; ./build.sh
 
-#RUN go get -u -t github.com/couchbase/sync_gateway/...
-
-#RUN git init
-#RUN git clone https://github.com/couchbase/sync_gateway.git
-#RUN dir sync_gateway
-#RUN git submodule update --init --recursive
-
-#RUN sync_gateway/build.sh
-RUN dir ~/sync_gateway/godeps
+EXPOSE 4985
 
 CMD ~/sync_gateway/godeps/bin/sync_gateway
