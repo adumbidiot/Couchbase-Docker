@@ -26,9 +26,16 @@ RUN apt-get -y install libicu-dev
 RUN apt-get -y install libssl-dev
 RUN apt-get -y install libcurl4-openssl-dev
 RUN apt-get -y install python
-RUN apt-get -y install erlang-nox
-RUN apt-get -y install erlang-dev
-RUN apt-get -y install erlang-src
+#RUN apt-get -y install erlang-nox
+#RUN apt-get -y install erlang-dev
+#RUN apt-get -y install erlang-src
+
+RUN git clone https://github.com/erlang/otp.git
+RUN cd otp; ./otp_build autoconf  
+RUN cd otp; ./configure
+RUN cd otp; make
+RUN cd otp; make install
+
 RUN apt-get -y install pkg-config
 RUN apt-get -y install check
 RUN apt-get -y install sqlite3
