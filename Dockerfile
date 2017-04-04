@@ -3,7 +3,7 @@ FROM resin/rpi-raspbian
 RUN apt-get -y update
 RUN apt-get -y install apt-utils
 
-RUN apt-get -y install git wget curl bc 
+RUN apt-get -y install git wget curl 
 RUN apt-get -y install gcc
 RUN apt-get -y install build-essential 
 
@@ -27,4 +27,4 @@ RUN cd ~/sync_gateway; ./build.sh
 
 EXPOSE 4985
 
-CMD ~/sync_gateway/godeps/bin/sync_gateway
+CMD ~/sync_gateway/godeps/bin/sync_gateway -adminInterface="0.0.0.0:4985"
