@@ -35,7 +35,7 @@ RUN apt-get -y install sqlite3
 RUN apt-get -y install ruby
 RUN apt-get -y install libglib2.0-dev
 RUN apt-get -y install libv8-dev
-RUN apt-get -y install libmozjs-dev
+RUN apt-get -y install libmozjs*
 RUN apt-get -y install libcloog-ppl0
 
 RUN cd couchbase; make
