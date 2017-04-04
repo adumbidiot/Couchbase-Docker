@@ -28,7 +28,7 @@ RUN apt-get -y install libcurl4-openssl-dev
 RUN apt-get -y install python
 RUN apt-get -y install erlang-nox
 RUN apt-get -y install erlang-dev
-RUN apt-get -y install erlang src
+RUN apt-get -y install erlang-src
 RUN apt-get -y install pkg-config
 RUN apt-get -y install check
 RUN apt-get -y install sqlite3
