@@ -48,5 +48,4 @@ RUN apt-get -y install cmake
 #RUN apt-get -y install gmake
 
 RUN erl -version
-RUN cd couchbase; cmake
-RUN cd couchbase; gmake all install
+RUN cd couchbase; make
