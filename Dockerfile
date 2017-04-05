@@ -45,5 +45,5 @@ RUN apt-get -y install libglib2.0-dev
 RUN apt-get -y install libv8-dev
 RUN apt-get -y install libmozjs-24-dev
 
-RUN erlang -v
+RUN erl -v
 RUN cd couchbase; make
