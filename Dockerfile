@@ -44,6 +44,7 @@ RUN apt-get -y install ruby
 RUN apt-get -y install libglib2.0-dev
 RUN apt-get -y install libv8-dev
 RUN apt-get -y install libmozjs-24-dev
+RUN apt-get -y install cmake
 
 RUN erl -version
 RUN cd couchbase; make
