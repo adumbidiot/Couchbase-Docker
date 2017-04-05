@@ -51,5 +51,5 @@ RUN erl -version
 RUN cd couchbase; cat ./couchdb/configure.ac
 #RUN cd couchbase; sed -i.bak '/as_fn_error $? "$erlang_version_error" "$LINENO" 5/d' ./couchdb/configure.ac
 RUN cd couchbase; cat ./couchdb/configure.ac
-RUN cd couchbase; sed -i.bak '/AC_MSG_ERROR([$erlang_version_error])/d' ./couchdb/configure.ac
+RUN cd couchbase; sed '/AC_MSG_ERROR([$erlang_version_error])/d' ./couchdb/configure.ac
 RUN cd couchbase; make
