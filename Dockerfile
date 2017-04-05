@@ -48,5 +48,5 @@ RUN apt-get -y install cmake
 #RUN apt-get -y install gmake
 
 RUN erl -version
-RUN cd couchbase; sed -i.bak '/as_fn_error $? "$erlang_version_error" "$LINENO" 5/d' 
+RUN cd couchbase; sed -i.bak '/as_fn_error $? "$erlang_version_error" "$LINENO" 5/d' make
 RUN cd couchbase; make
