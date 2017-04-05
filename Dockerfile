@@ -48,6 +48,6 @@ RUN apt-get -y install cmake
 #RUN apt-get -y install gmake
 
 RUN erl -version
-RUN cd couchbase; cat ./couchdb/Makefile.am
+RUN cd couchbase; cat ./couchdb/configure.ac
 RUN cd couchbase; sed -i.bak '/as_fn_error $? "$erlang_version_error" "$LINENO" 5/d' ./couchdb/Makefile
 RUN cd couchbase; make
