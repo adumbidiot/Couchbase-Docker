@@ -13,11 +13,11 @@ RUN chmod a+x ~/bin/repo
 ENV PATH="/root/bin:${PATH}"
 
 RUN mkdir couchbase
-RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
+#RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
+RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-4.5.0.xml
 RUN cd couchbase; repo sync
 
 RUN apt-get -y install erlang-src
-
 RUN apt-get -y install libncurses5-dev libncursesw5-dev 
 
 #RUN git clone https://github.com/erlang/otp.git
@@ -36,11 +36,7 @@ RUN apt-get -y install libmozjs-24-dev
 RUN apt-get -y install cmake
 #RUN apt-get -y install gmake
 
-RUN erl -version
 RUN rm ./couchbase/couchdb/configure.ac
 ADD ./configure.ac ./couchbase/couchdb/configure.ac
 RUN cd couchbase; cat ./couchdb/configure.ac
-#RUN cd couchbase; sed -i.bak '/as_fn_error $? "$erlang_version_error" "$LINENO" 5/d' ./couchdb/configure.ac
-#RUN cd couchbase; cat ./couchdb/configure.ac
-#RUN cd couchbase; sed -i '/AC_MSG_ERROR([$erlang_version_error])/d' ./couchdb/configure.ac
 RUN cd couchbase; make -d
