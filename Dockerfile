@@ -36,7 +36,7 @@ RUN apt-get -y install libmozjs-24-dev
 RUN apt-get -y install cmake
 #RUN apt-get -y install gmake
 
-RUN rm ./couchbase/couchdb/configure.ac
-ADD ./configure.ac ./couchbase/couchdb/configure.ac
-RUN cd couchbase; cat ./couchdb/configure.ac
+#RUN rm ./couchbase/couchdb/configure.ac
+#ADD ./configure.ac ./couchbase/couchdb/configure.ac
+#RUN cd couchbase; cat ./couchdb/configure.ac
 RUN cd couchbase; make -d
