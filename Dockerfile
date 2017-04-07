@@ -34,7 +34,7 @@ RUN apt-get -y install libglib2.0-dev
 RUN apt-get -y install libv8-dev
 RUN apt-get -y install libmozjs-24-dev
 RUN apt-get -y install cmake
-RUN apt-get -y install jemalloc
+RUN apt-get -y install libjemalloc-dev
 #RUN apt-get -y install gmake
 RUN erl -version
 #RUN rm ./couchbase/couchdb/configure.ac
