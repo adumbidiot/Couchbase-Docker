@@ -3,7 +3,7 @@ FROM resin/rpi-raspbian
 RUN apt-get -y update
 RUN apt-get -y install apt-utils
 
-RUN apt-get -y install curl git python build-essential automake libtool libevent-dev libsnappy-dev libicu-dev libssl-dev libcurl4-openssl-dev python erlang-nox erlang-dev pkg-config check sqlite3 ruby libglib2.0-dev libv8-dev libmozjs-dev libcloog-ppl0
+RUN apt-get -y install curl git python build-essential automake libtool libevent-dev libsnappy-dev libicu-dev libssl-dev libcurl4-openssl-dev python erlang-nox erlang-dev pkg-config check sqlite3 ruby libglib2.0-dev libv8-dev libmozjs-24-bin
 
 RUN mkdir ~/bin
 
