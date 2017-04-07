@@ -14,7 +14,7 @@ ENV PATH="/root/bin:${PATH}"
 
 RUN mkdir couchbase
 #RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-2.1.1.xml
-RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-4.5.0.xml
+RUN cd couchbase; repo init -u git://github.com/couchbase/manifest.git -m rel-3.0.0.xml
 RUN cd couchbase; repo sync
 
 RUN apt-get -y install erlang-src
